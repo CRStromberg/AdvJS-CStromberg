@@ -12,13 +12,19 @@ Algo
 
 "use strict";
 const asrt = require('assert').strict;
+const readline = require('readline');
 
+
+var userinput = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 function test()
 {
-    var inr1 = [2, 8, 54];
-    var ins1 = [15, 19, 32];
-    var outr2 = [28, 30, 10];
+    var inr1 = [-900, 80, 54];
+    var ins1 = [345, 650, 32];
+    var outr2 = [1590, 1220, 10];
 
     for (var i = 0; i<3;i++)
     {
@@ -35,13 +41,19 @@ function answer(r, s)
 
 function r2()
 {
-
+    //Get Numbers from user
+    userinput.question('',function (r1) {
+        userinput.question('',function (s1) {
+       var r = parseInt(r1);
+       var s = parseInt(s1);
+       console.log(answer(r, s));
+       userinput.close();
+         });
+     });
 }
 
 if (require.main == module)
 {
-    if (process.argv.length > 2 && process.argv[2] === 'test')
-        test();
-    else
-    r2();    
+    if (process.argv.length > 2 && process.argv[2] === 'test') test();
+    else r2();    
 }
