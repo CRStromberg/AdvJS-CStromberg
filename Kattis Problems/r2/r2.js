@@ -42,14 +42,14 @@ function answer(r, s)
 function r2()
 {
     //Get Numbers from user
-    userinput.question('',function (r1) {
-        userinput.question('',function (s1) {
-       var r = parseInt(r1);
-       var s = parseInt(s1);
-       console.log(answer(r, s));
-       userinput.close();
-         });
-     });
+    userinput.question('',function (numin) 
+    {
+        var split_numin = numin.split(" ")
+        var r1 = parseInt(split_numin[0]);
+        var s1 = parseInt(split_numin[1]);
+        console.log(answer(r1, s1));
+        userinput.close();     
+    });
 }
 
 if (require.main == module)
