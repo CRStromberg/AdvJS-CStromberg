@@ -24,7 +24,6 @@ function test()
     {
         var ans = answer(inr1[i], ins1[i]);
         asrt.strictEqual(outr2[i], ans);
-        console.log(ans, outr2[i]);
     }
     console.log('all test cases passed.');
 }
