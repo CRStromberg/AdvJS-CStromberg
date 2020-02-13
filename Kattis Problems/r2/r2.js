@@ -6,7 +6,7 @@ Algo
     -  Compute Data
         *take second number and multiply it by 2
         *subtract that number by the first number
-    -  Output anser
+    -  Output answer
 */
 
 
@@ -48,7 +48,7 @@ function r2()
         var r1 = parseInt(split_numin[0]);
         var s1 = parseInt(split_numin[1]);
         console.log(answer(r1, s1));
-        userinput.close();     
+         userinput.close();     
     });
 }
 

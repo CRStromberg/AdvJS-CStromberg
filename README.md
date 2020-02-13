@@ -8,3 +8,8 @@ Chris Stromberg
 - R2
 - Level 1.2
 - Grade 60% due to low difficulty
+
+## Some Sum
+- Some Sum
+- Level 1.6
+- Grade 80% due to difficulty Level

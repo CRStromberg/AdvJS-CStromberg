@@ -17,12 +17,12 @@ const readline = require('readline');
 var userinput = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-});
+  });
 
 function test()
 {
-    var inr1 = [4, 10, 7];
-    var out1 = ['even', 'odd', 'either'];
+    var inr1 = ['4', '10', '7'];
+    var out1 = ['Even', 'Odd', 'Either'];
 
     for (var i = 0; i<3;i++)
     {
@@ -34,31 +34,32 @@ function test()
 function solve(user_num)
 {
     switch(user_num) {
-        case 4:
-        case 8:
-          return 'even';
+        case '4':
+        case '8':
+          return 'Even';
           break;
-        case 2:
-        case 6:
-        case 10:
-          return 'odd';
+        case '2':
+        case '6':
+        case '10':
+          return 'Odd';
           break;
         default:
-          return 'either';
+          return 'Either';
       } 
 }
 
+function input_data()
+{
+    //Get Numbers from user
+    userinput.on('line', (numin) => {
+        console.log(solve(numin));
+        userinput.close();  
+    });
+
+}
 if (require.main == module)
 {
-    var answ;
-    if (process.argv.length > 2 && process.argv[2] === 'test') test();
-    else
-    {
-        //Get Numbers from user
-        userinput.question('',function (numin) 
-        {
-            colsole.log(solve(numin));
-            userinput.close();     
-        });
-    }
+    var answer;
+    if (process.argv.length > 2 && process.argv[2] === 'test')  test();
+    else  input_data();
 }
