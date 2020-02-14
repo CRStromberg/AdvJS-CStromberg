@@ -15,7 +15,6 @@ Algo
 const asrt = require('assert').strict;
 const readline = require('readline');
 
-
 var userinput = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -29,7 +28,7 @@ function test()
     var ans_one = 24;
     var ans_two = 19;
     var ans_three = 77;    
-        
+
     asrt.strictEqual(ans(test_case_one), ans_one);
     asrt.strictEqual(ans(test_case_two), ans_two);
     asrt.strictEqual(ans(test_case_three), ans_three);
@@ -38,12 +37,33 @@ function test()
 
 function solve()
 {
+    userinput.question('', function(num) {
+        var num_books = num.split('\n');
+        console.log(num_books);
 
+        userinput.close();
+    });
+
+    
+    
+    
 }
 
 function ans(books)
 {
+    var n = books[0];
+    var total = 0;
 
+    //delete N, move everything down, and sort array
+    books.shift();
+    books.sort(function(a, b){return b - a});
+ 
+    for(var i = 0;i<n;i++)
+    {
+        if((i+1)%3===0) var temp = books[i]
+        else total += books[i];
+    }
+    return total;
 }
 
 if (require.main == module)
