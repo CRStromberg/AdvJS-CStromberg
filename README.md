@@ -13,3 +13,8 @@ Chris Stromberg
 - Some Sum
 - Level 1.6
 - Grade 80% due to difficulty Level
+
+## Akcija
+- Akcija
+- Level 2.0
+- Grade 100%

@@ -37,16 +37,15 @@ function test()
 
 function solve()
 {
-    userinput.question('', function(num) {
-        var num_books = num.split('\n');
-        console.log(num_books);
-
-        userinput.close();
-    });
-
-    
-    
-    
+    var num_books = [];
+    //Read line by line inserting into array, and converting to int
+    userinput.on('line', function(num) {
+        num_books.push(parseInt(num));
+    }).on('close', () => {
+        //Array has been created and modified ready to be computed (This is for me for future reference)
+        console.log(ans(num_books));
+        process.exit(0); 
+    });   
 }
 
 function ans(books)
