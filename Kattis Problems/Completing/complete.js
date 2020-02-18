@@ -99,6 +99,28 @@ function ans(A, cen_point)
 
 function get_points()
 {
+    var A = [];
+    var B = [];
+    var C = [];    
+    var points = [];
+    //Read line by line inserting into array
+    userinput.on('line', function(num) {
+        points.push(num);
+    }).on('close', () => {
+        //Break array up into the three given points and convert to int
+        var temp = points[0].split(' ');
+        A[0] = parseInt(temp[0]);
+        A[1] = parseInt(temp[1]);
+        var temp = points[1].split(' ');
+        B[0] = parseInt(temp[0]);
+        B[1] = parseInt(temp[1]);
+        var temp = points[2].split(' ');
+        C[0] = parseInt(temp[0]);
+        C[1] = parseInt(temp[1]);
+        temp = solve(A, B, C);
+        console.log(temp[0], temp[1]);
+        process.exit(0); 
+    }); 
 
 }
 

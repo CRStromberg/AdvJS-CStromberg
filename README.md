@@ -18,3 +18,8 @@ Chris Stromberg
 - Akcija
 - Level 2.0
 - Grade 100%
+
+## Completing the Square
+- Completing the Square
+- Level 2.0
+- Grade 100%
