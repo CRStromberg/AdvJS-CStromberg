@@ -1,5 +1,4 @@
 var turn = 0;
-var count = 0;
 
 function place_x(clicked_id) 
 {
@@ -23,4 +22,9 @@ function main(clicked_id)
         place_o(clicked_id);
         turn--;    
     }
+}
+
+function restart()
+{
+    location.reload();
 }
