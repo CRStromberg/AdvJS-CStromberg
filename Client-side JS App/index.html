@@ -11,21 +11,55 @@
     <h1>Tic Tac Toe!</h1>
     <table class="center">
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="1" onclick="main()"></td>
+            <td id="2" onclick="main()"></td>
+            <td id="3" onclick="main()"></td>
         </tr>
         <tr>
-            <td id="x"><button type="button" onclick="place_x()"></button></td>
-            <td id="o"><button type="button" onclick="place_o()"></button></td>
-            <td></td>
+            <td id="4" onclick="main()"></td>
+            <td id="5" onclick="main()"></td>
+            <td id="6" onclick="main()"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="7" onclick="main()"></td>
+            <td id="8" onclick="main()"></td>
+            <td id="9" onclick="main()"></td>
         </tr>
     </table>
-    <script type="text/javascript" src="tictactoe.js"></script>
+    <script>
+        var turn = 0;
+
+        function main()
+        {
+            if(turn == 0)
+            {
+                document.getElementById("1").innerHTML = "X";
+                document.getElementById("2").innerHTML = "X";
+                document.getElementById("3").innerHTML = "X";
+                document.getElementById("4").innerHTML = "X";
+                document.getElementById("5").innerHTML = "X";
+                document.getElementById("6").innerHTML = "X";
+                document.getElementById("7").innerHTML = "X";
+                document.getElementById("8").innerHTML = "X";
+                document.getElementById("9").innerHTML = "X";
+                turn++;
+            }
+            else
+            {
+                document.getElementById("1").innerHTML = "O";
+                document.getElementById("2").innerHTML = "O";
+                document.getElementById("3").innerHTML = "O";
+                document.getElementById("4").innerHTML = "O";
+                document.getElementById("5").innerHTML = "O";
+                document.getElementById("6").innerHTML = "O";
+                document.getElementById("7").innerHTML = "O";
+                document.getElementById("8").innerHTML = "O";
+                document.getElementById("9").innerHTML = "O";
+                turn--;
+            }
+        }
+    </script>
 </body>
 </html>
+
+<!-- id="user" onclick="main()" -->
